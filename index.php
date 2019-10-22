@@ -1,3 +1,6 @@
+<?
+require 'crud.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,9 +15,9 @@
 
 <body>
     <div class="container">
-        <form class="form-horizontal" action="index.php#formulario" method="post" role="form" data-toggle="validator">
+        <form class="form-horizontal" action="crud.php" method="post" role="form" data-toggle="validator">
             <div class="form-group">
-                <label class="control-label col-sm-3">Nome*:</label>
+                <label for="nome" class="control-label col-sm-3">Nome*:</label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control" name="nome" id="nome" value="" placeholder="seu nome"
                         required>
@@ -22,7 +25,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-3">Email*:</label>
+                <label for="email" class="control-label col-sm-3">Email*:</label>
                 <div class="col-sm-9">
                     <input type="email" class="form-control" name="email" id="email" value=""
                         placeholder="exemplo@dominio.com" required>
@@ -31,9 +34,9 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-3">Assunto*:</label>
+                <label for="assunto" class="control-label col-sm-3">Assunto*:</label>
                 <div class="col-sm-9">
-                    <select class="form-control" name="assunto" required>
+                    <select class="form-control" name="assunto" id="assunto" required>
                         <option value="" selected="selected" disabled="disabled"> -- Escolha uma opção --</option>
                         <option value="duvida">Dúvida</option>
                         <option value="sugestao">Sugestão</option>
@@ -43,7 +46,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-3">Mensagem*:</label>
+                <label for="mensagem" class="control-label col-sm-3">Mensagem*:</label>
                 <div class="col-sm-9">
                     <textarea class="form-control" id="exampleTextarea" rows="6" id="mensagem" name="mensagem"
                         placeholder="sua mensagem" required></textarea>
